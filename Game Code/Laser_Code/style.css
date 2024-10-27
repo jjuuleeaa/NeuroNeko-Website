@@ -70,7 +70,6 @@ body {
 #pawId {
   visibility: hidden;
   height: auto;
-  width: 50px;
   position: absolute;
 }
 .paw {

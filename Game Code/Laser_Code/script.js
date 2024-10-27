@@ -1,5 +1,5 @@
 let startTime, endTime, dotArenaDiv, dot, trials, count, overlay;
-const maxTrialNumber = 4;
+const maxTrialNumber = 3;
 overlay = document.getElementById("gameStartOverlayId");
 
 function getStartTime() {
