@@ -31,7 +31,7 @@ In this game, a cat paw cursor is used to catch moving lasers. The speed and unp
 ## Setup Instructions
 
 1. **Clone the Repository**:
-git clone https://github.com/your-repo/neuroneko.git
+git clone [https://github.com/your-repo/neuroneko.git](https://github.com/jjuuleeaa/NeuroNeko-Website/tree/main?tab=readme-ov-file)
 
 2. **Open the Project**:
 Navigate to the project folder and open `index.html` to get started.
