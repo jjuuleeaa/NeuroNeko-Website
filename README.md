@@ -10,17 +10,17 @@ Welcome to **Neuroneko**, a website designed to help improve cognitive functions
 
 - **Cognitive Test**: Assess your cognitive skills in memory, spatial awareness, and processing speed.
 - **Three Mini-Games**:
-  1. **Colorful Cats: Memory Meow** – Test and improve your short-term memory by recalling the colors of cute cats.
-  2. **Neko's Maze** – Navigate through a 2D maze, testing your spatial awareness and problem-solving skills.
+  1. **Meowmory** – Test and improve your short-term memory by recalling the colors of cute cats.
+  2. **Find the Treat** – Navigate through a 2D maze, testing your spatial awareness and problem-solving skills.
   3. **Catch the Laser** – Sharpen your reflexes by catching lasers with a cat paw, testing your processing speed.
 
 ## Game Breakdown
 
-### 1. Colorful Cats: Memory Meow
+### 1. Meowmory
 
 This game is designed to test short-term memory by showing players a sequence of colorful cats. Players must remember the colors and answer correctly after a brief delay. The game gets progressively more difficult by adding more cats per level.
 
-### 2. Neko's Maze
+### 2. Find the Treat
 
 Navigate through a 2D maze and test your spatial awareness by finding the exit. Each level introduces new challenges, requiring you to strategize how to escape the maze within the given time limit.
 
