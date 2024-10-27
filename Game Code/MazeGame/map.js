@@ -1,8 +1,8 @@
-const gameContainer = document.querySelector("#gamecontainer");
+const gameContainer = document.getElementById("gamecontainer");
 
 function createMap() {
   try {
-    const map = `##########
+    const map1 = `##########
 ###    ###
 ### ##   ,
 #   ######
@@ -12,6 +12,30 @@ function createMap() {
 # ###   ##
 #.########`;
 
+    const map2 = `#########,#####
+###       #####
+### ###########
+### #####   ###
+###     ### ###
+####### ### ###
+#   ### ### ###
+# ##### ### ###
+#           ###
+#######.#######`;
+    if (!gameContainer) throw Error();
+
+    const map = Math.floor(Math.random() * 2) == 0 ? map1 : map2;
+    const mapContent = map.split("\n");
+    gameContainer.style.display = "grid";
+    console.log(mapContent.length, mapContent[0].length);
+    document.documentElement.style.setProperty(
+      "--row",
+      `repeat(${mapContent.length}, 1fr)`
+    );
+    document.documentElement.style.setProperty(
+      "--col",
+      `repeat(${mapContent[0].length}, 1fr)`
+    );
     for (const arr of map) {
       if (arr === "#") createWall();
       else if (arr == " ") createEmptyPath();
@@ -91,9 +115,12 @@ function createLineFrom(prevDiv, toDiv) {
 
 function play() {
   try {
+    createMap();
+
     let heldDown = false;
     let prevDiv = null;
     let headDiv = document.querySelector("#hasDot");
+
     document.addEventListener("mousedown", (e) => {
       if (!e.target) throw Error("weird");
       let isClickCorrect =
@@ -138,6 +165,8 @@ function play() {
 
             if (headDiv && headDiv.classList.contains("end")) {
               const text = document.querySelector("#winnerText");
+              const button = document.getElementById("playAgain");
+              if (button) button.style.display = "block";
               if (text) text.innerHTML = "You Won";
             }
           }
@@ -154,5 +183,16 @@ function play() {
     console.log(error);
   }
 }
-createMap();
+
+function restart() {
+  const text = document.querySelector("#winnerText");
+  if (text) text.innerHTML = "";
+  if (!gameContainer) throw Error("Game container doesnt exist");
+  while (gameContainer.lastChild) {
+    gameContainer.lastChild.remove();
+  }
+  console.log(gameContainer.children);
+  play();
+}
+
 play();

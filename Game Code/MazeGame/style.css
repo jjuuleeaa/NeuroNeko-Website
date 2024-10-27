@@ -3,6 +3,11 @@
   margin: 0;
 }
 
+:root {
+  --row: repeat(9, 1fr);
+  --col: repeat(10, 1fr);
+}
+
 #gamecontainer {
   margin: auto;
   width: fit-content;
@@ -10,7 +15,7 @@
   background-color: green;
   border: solid 5px black;
   display: grid;
-  grid: repeat(9, 1fr) / repeat(10, 1fr);
+  grid: var(--row) / var(--col);
   user-select: none;
 }
 
@@ -73,4 +78,20 @@
   top: 50%;
   right: 50%;
   transform: translate(-5.5%, -50%);
+}
+
+#winnerText {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 30px;
+}
+
+#playAgain {
+  margin: auto;
+  display: block;
+  background-color: black;
+  color: white;
+  font-size: 15px;
+  border-radius: 20px;
+  padding: 10px;
 }
