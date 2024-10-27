@@ -1,43 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Colorful Cats: Memory Meow</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <!-- Welcome Screen -->
+    <link rel="stylesheet" href="colorful-cats-style.css" />
+  </head>
+  <body>
     <div id="welcome-screen">
-        <h1>Welcome to Colorful Cats: Memory Meow</h1>
-        <p>Hi there, I'm Meowster, your guide! Remember the cats and their colors to advance to the next level.</p>
-        <button onclick="startGame()">Start Game</button>
+      <h1>Welcome to Colorful Cats: Memory Meow</h1>
+      <p>
+        Hi there, I'm Meowster, your guide! Remember the cats and their colors
+        to advance to the next level.
+      </p>
+      <button onclick="startGame()">Start Game</button>
     </div>
 
     <!-- Game Area -->
-    <div id="game-area" style="display:none;">
-        <h2>Level <span id="level"></span></h2>
-        <div id="cat-container"></div>
-        <p>What was the color of the cat?</p>
-        <input type="text" id="cat-answer" placeholder="Enter color">
+    <div id="game-area" style="display: none">
+      <h2>Level <span id="level"></span></h2>
+      <div id="cat-container"></div>
+      <p>What was the color of the cat?</p>
+      <div id="answer-section">
+        <input type="text" id="cat-answer" placeholder="Enter color" />
         <button onclick="checkAnswer()">Submit</button>
+      </div>
+      <div id="health-bar">
+        <span
+          id="health-indicator"
+          style="
+            width: 100%;
+            background-color: green;
+            display: block;
+            height: 20px;
+          "
+        ></span>
+      </div>
     </div>
 
     <!-- Result Screens -->
-    <div id="success-screen" style="display:none;">
-        <h2>Correct! 🎉</h2>
-        <p>A happy cat thanks you!</p>
-        <img src="happy-cat.png" alt="Happy Cat">
-        <button onclick="nextLevel()">Next Level</button>
+    <div id="success-screen" style="display: none">
+      <h2>Correct! 🎉</h2>
+      <p>A happy cat thanks you!</p>
+      <button onclick="nextLevel()">Next Level</button>
     </div>
 
-    <div id="fail-screen" style="display:none;">
-        <h2>Oops! 😿</h2>
-        <p>That wasn't right, try again!</p>
-        <img src="sad-cat.png" alt="Sad Cat">
-        <button onclick="restartGame()">Try Again</button>
+    <div id="fail-screen" style="display: none">
+      <h2>Oops! 😿</h2>
+      <p>That wasn't right, try again!</p>
+      <button onclick="restartGame()">Try Again</button>
     </div>
 
-    <script src="script.js"></script>
-</body>
+    <script src="colorful-cats.js"></script>
+  </body>
 </html>

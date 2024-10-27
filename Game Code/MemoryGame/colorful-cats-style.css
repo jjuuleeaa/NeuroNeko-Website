@@ -1,39 +1,94 @@
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f5f5f5;
-    text-align: center;
+  font-family: "Arial", sans-serif;
+  background-color: #f5f5f5;
+  text-align: center;
 }
 
-h1, h2 {
-    color: #333;
+h1,
+h2 {
+  color: #333;
 }
 
 #cat-container {
-    display: flex;
-    justify-content: center;
-    margin: 20px;
+  display: flex;
+  justify-content: center;
+  margin: 20px;
 }
 
 #cat-container img {
-    width: 150px;
-    margin: 10px;
-    border: 2px solid #ccc;
-    border-radius: 10px;
+  width: 150px;
+  margin: 10px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
 }
 
 button {
-    background-color: #ffcc00;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  background-color: #ffcc00;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 button:hover {
-    background-color: #ff9900;
+  background-color: #ff9900;
 }
 
-#success-screen img, #fail-screen img {
-    width: 100px;
+#answer-section {
+  display: none;
+}
+
+#success-screen img,
+#fail-screen img {
+  width: 100px;
+}
+/* Add fade-in/fade-out for game transitions */
+.fade-in {
+  animation: fadeIn 1s forwards;
+}
+
+.fade-out {
+  animation: fadeOut 1s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Add shake animation for wrong answers */
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  75% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.shake {
+  animation: shake 0.5s;
 }
